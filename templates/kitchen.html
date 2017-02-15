@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<title>
+KITCHEN</title>
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body style="background-image:url('http://192.168.0.11/static/kit.jpg')">
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+<!-- <h1 style="text-align: center;font-size:50px;">KITCHEN</h1> -->
+&emsp;&emsp;&emsp;&emsp;
+<div class="jumbotron" style="position:relative;top:80px;width:520px;height:270px;background: rgba(255,255, 255, 0.5); ">
+&emsp;&emsp;&emsp;&emsp;
+<h2 style="display:inline;position:relative;top:20px">LIGHT</h2>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+{%if a[29]['state']==1%}
+ <a href="{{url_for('change',pin=29,action='off')}}">      
+<img src="{{ url_for('static', filename='bulb_on.png') }}"  width="30px" height="30px" style="position:relative;top:10px"></a>
+</a>
+{%else%}
+ <a href="{{url_for('change',pin=29,action = 'on')}}">      
+<img src="{{ url_for('static', filename='bulb_off.png') }}"  width="30px" height="30px" style="position:relative;top:10px"></a>
+</a>
+{%endif%}
+</a>
+<br>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;
+<h2 style="display:inline;position:relative;top:20px">EXHAUST FAN</h2>
+&emsp;&emsp;&emsp;&emsp;&emsp;
+{%if a[31]['state']==1%}
+ <a href="{{url_for('change',pin=31, action='off')}}">      
+<img src="{{ url_for('static', filename='fan_on.gif') }}"  width="30px" height="30px" style="position:relative;top:10px" >
+</a>
+{%else%}
+ <a href="{{url_for('change',pin=31,action = 'on')}}">      
+<img src="{{ url_for('static', filename='fan_off.png') }}"  width="30px" height="30px" style="position:relative;top:10px" >
+</a>
+{%endif%}
+</div>
+<div class="jumbotron" style="width:520px;height:270px;position:absolute;left:770px;top:190px;background: rgba(255,255, 255, 0.5);">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <div class="span">
+  <a href="{{url_for('bathroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BATHROOM</button></p>
+</a>
+<br>
+ <a href="{{url_for('bedroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BEDROOM</button></p>
+</a>
+<br>
+<a href="{{url_for('livingroom')}}">
+ <p><button class="btn btn-primary btn-block">GO TO LIVINGROOM</button></p></a>
+</div>
+</div>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+</div>
+</div>
+</div>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="{{url_for('hello')}}">
+  <button type="button" style="position:relative;left:-310px;top:80px;" class="btn btn-primary btn-lg">GO TO MAINPAGE</button>
+</a>
+</body>
+</html>

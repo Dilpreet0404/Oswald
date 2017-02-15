@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<title>
+SCHEDULE</title>
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+<body style="background-image:url('http://192.168.0.11/static/abc.jpg')">
+<table>
+  <tr>
+    <th><center><h2>Schedule</h2></center></th>
+  </tr>
+  <tr>
+    <td><center>Do your Exercise from 6AM to 7AM</center></td>
+    
+  </tr>
+  <tr>
+    <td><center>Prepare for Project Presentation</center></td>
+    
+  </tr>
+  <tr>
+    <td><center>Project Setup at 12 Noon </center></td>
+    
+  </tr>
+  <tr>
+    <td><center>Project Presenstation from 1 to 5</center></td>
+   
+  </tr>
+  <tr>
+    <td><center>Go for Pik-cell Art Competetion</center></td>
+    
+  </tr>
+  <tr>
+    <td><center>7:30 Dinner Time</center></td>
+    
+  </tr>
+  <tr>
+    <td><center>Call home</center></td>
+    
+  </tr>
+<tr>
+    <td><center>Prepare for the Next day</center></td>
+    
+  </tr>
+</table>
+<div style="width:520px;height:170px;position:relative;left:170px;top:30px;">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+  <div class="span">
+  <a href="{{url_for('bathroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BATHROOM</button></p>
+</a>
+<br>
+ <a href="{{url_for('bedroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BEDROOM</button></p>
+</a>
+<br>
+<a href="{{url_for('livingroom')}}">
+ <p><button class="btn btn-primary btn-block">GO TO LIVINGROOM</button></p></a>
+</div>
+</div>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+</div>
+</div>
+</div>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="{{url_for('change',pin = 155, action = "ON")}}">
+ <button type="button" style="position:relative;left:470px;top:-155px;" class="btn btn-danger">Voice</button></a>
+<a href="{{url_for('hello')}}">
+  <button type="button" style="position:relative;left:350px;top:-75px;" class="btn btn-primary btn-lg">GO TO MAINPAGE</button>
+</a>
+
+</body>
+</html>

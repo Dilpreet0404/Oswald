@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<title>
+BEDROOM</title>
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body style="background-image:url('http://192.168.0.11/static/bed.jpg')">
+<div class="container">
+<br>
+<br>
+<!-- <h1 style="text-align: center;font-size:50px;">BEDROOM</h1> -->
+<br>
+<br>
+<div class="jumbotron" style="width:520px;height:320px;position:relative;top:100px;background: rgba(255,255, 255, 0.5);  ">
+&emsp;&emsp;&emsp;&emsp;
+<h3 style="display:inline;position:relative;top:-10px;font-weight: bold;">LIGHT</h3>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+{%if a[16]['state']==1%}
+ <a href="{{url_for('change',pin=16, action = 'off')}}">            
+<img src="{{ url_for('static', filename='bulb_on.png') }}"  width="30px" height="30px" style="position:relative;top:-20px"></a>
+{%else%}
+ <a href="{{url_for('change',pin=16, action = 'on')}}">      
+<img src="{{ url_for('static', filename='bulb_off.png') }}"  width="30px" height="30px" style="position:relative;top:-20px">
+</a>
+{%endif%}
+<br>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;
+<h3 style="display:inline;position:relative;top:-10px;font-weight: bold;">AC</h3>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+{%if a[12]['state']==1%}
+  <a href="{{url_for('change',pin=12, action = 'off')}}">      
+<img src="{{ url_for('static', filename='switch_on.png') }}"  width="30px" height="30px" style="position:relative;top:-20px"></a>
+{%else%}
+ <a href="{{url_for('change',pin=12, action = 'on')}}">      
+<img src="{{ url_for('static', filename='switch_off.png') }}"  width="30px" height="30px" style="position:relative;top:-20px">
+</a>
+{%endif%}
+<br><br><br>
+&emsp;&emsp;&emsp;&emsp;
+<h3 style="display:inline;position:relative;top:-10px;font-weight: bold;">FAN</h3>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+{%if a[7]['state']==1%}
+ <a href="{{url_for('change',pin=7, action = 'off')}}">      
+<img src="{{ url_for('static', filename='fan_on.gif') }}"  width="30px" height="30px" style="position:relative;top:-20px"></a>
+{%else%}
+ <a href="{{url_for('change',pin=7, action = 'on')}}">      
+<img src="{{ url_for('static', filename='fan_off.png') }}"  width="30px" height="30px" style="position:relative;top:-20px">
+</a>
+{%endif%}
+</div>
+<div class="jumbotron" style="width:520px;height:320px;position:absolute;left:750px;top:180px;
+background: rgba(255,255, 255, 0.5);">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+  <div class="span">
+  <a href="{{url_for('bathroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BATHROOM</button></p>
+</a>
+ <a href="{{url_for('kitchen')}}">
+<p><button class="btn btn-primary btn-block">GO TO KITCHEN</button></p>
+</a>
+<a href="{{url_for('livingroom')}}">
+ <p><button class="btn btn-primary btn-block">GO TO LIVINGROOM</button></p></a>
+</div>
+</div>
+
+</div>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="{{url_for('hello')}}">
+  <button type="button" style="position:relative;left:-40px;top:80px;" class="btn btn-primary btn-lg">GO TO MAINPAGE</button>
+</a>
+</body>
+</html>

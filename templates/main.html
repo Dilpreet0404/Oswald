@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<title>
+Home Automation</title>
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<!-- <img src="{{ url_for('static', filename='head.png') }}" width="130px" height="90px"  style="position:absolute;left:550px;top:0px" > -->
+<img src="{{ url_for('static', filename='schedule.jpg') }}"     usemap="#planetmap" >
+<map name="planetmap">
+  <area shape="rect" coords="380,120,770,480" href="{{ url_for('livingroom') }}" >
+  <area shape="rect" coords="790,120,930,350" href="{{ url_for('bathroom')}}">
+  <area shape="rect" coords="940,120,1280,400" href="{{ url_for('bedroom')}}">
+  <area shape="rect" coords="900,510,1280,710"  href="{{ url_for('kitchen')}}" >
+  <area shape="circle" coords="795,580,30" href="{{ url_for('firealarm')}}" > 
+   <area shape="rect" coords="370,520,410,590" href="{{ url_for('door')}}" >
+   <area shape="rect" coords="65,300,210,355" href="{{ url_for('sche')}}" >
+   
+</map>
+
+
+
+</html>

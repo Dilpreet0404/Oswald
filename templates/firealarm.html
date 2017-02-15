@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<title>
+HOME ENVIRONMENT STATUS</title>
+<link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body style="background-image:url('http://192.168.0.11/static/smoke.jpg')">
+<div class="container">
+<br>
+<br>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;
+<div class="jumbotron" style="position:relative;top:80px;width:520px;height:270px;background: rgba(255,255, 255, 0.5); ">
+<a href="{{url_for('change',pin = 15, action = "ON")}}">
+ <button type="button" class="btn btn-danger">Check Gas Level</button></a>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+{%if(a==0)%}      
+<h3 style="position:inline-block; font-family: Times New Roman, Times, serif;">Moderate</h3>
+{%endif%}
+
+{%if(a==1)%}      
+<h3 style="position:inline-block; font-family: Times New Roman, Times, serif;"><script>alert("HIGH");</script>HIGH</h3>
+{%endif%}
+</div>
+<br>
+<br>
+<br>
+<div class="jumbotron" style="width:520px;height:350px;position:absolute;left:750px;top:140px;background: rgba(255,255, 255, 0.5);">
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="{{url_for('bathroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BATHROOM</button></p>
+</a>
+<br>
+<a href="{{url_for('bedroom')}}">
+<p><button class="btn btn-primary btn-block">GO TO BEDROOM</button></p>
+</a>
+<br>
+<a href="{{url_for('livingroom')}}">
+ <p><button class="btn btn-primary btn-block">GO TO LIVINGROOM</button></p></a>
+</div>
+</div>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+</div>
+</div>
+</div>
+<br>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<a href="{{url_for('hello')}}">
+  <button type="button" style="position:relative;left:-40px;top:80px;" class="btn btn-primary btn-lg">GO TO MAINPAGE</button>
+</a>
+</body>
+</html>
